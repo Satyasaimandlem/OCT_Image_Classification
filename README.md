@@ -1,70 +1,70 @@
-# OCT_Image_Classification Of Drusen, DME and CNV
+# Classification of Drusen, DME and CNV OCT images using Deep Learning algorithms
 
-Introduction:
-In recent times, there has been a growing concern regarding retinal disorders, which have emerged as a significant public health issue. These disorders progress gradually and often go unnoticed without any apparent symptoms. Each year, millions of individuals worldwide receive a diagnosis of a retinal condition. These disorders can manifest in various forms, most commonly affecting vision. They can affect any part of the retina, leading to visual impairments, and in severe cases, blindness. Examples of retinal disorders include diabetic retinopathy, macular pucker, glaucoma, macular hole, age-related macular degeneration, drusen, central serous retinopathy, macular edema, vitreous traction, and optic nerve abnormalities.
+## Introduction:
+In contemporary times, there has arisen a burgeoning apprehension concerning retinal ailments, which have surfaced as a notable public health concern. These maladies progress incrementally and often elude detection due to the absence of overt symptoms. According to National Library of Medicine, 2.2 Million people globally are suffering from Vision Impairments, can grow to 5.4 million by 2050. These disorders can manifest in diverse presentations, primarily impacting visual function. They can afflict any segment of the retina, resulting in visual impairments and, in severe instances, blindness. Examples of retinal disorders encompass diabetic retinopathy, macular pucker, glaucoma, macular hole, age-related macular degeneration, drusen, central serous retinopathy, macular edema, vitreous traction, and abnormalities of the optic nerve.
 
-The human eye is a complex organ responsible for vision, composed of several parts that work together to capture and process light. The main components of the eye include the cornea, iris, pupil, lens, retina, and optic nerve.The retina is a crucial part of the eye located at the back, containing light-sensitive cells called photoreceptors that convert light into electrical signals. The macula is a small area in the center of the retina responsible for sharp, central vision, essential for activities like reading and driving. Retina plays a crucial role in receiving and organizing visual information. **Early detection and treatment are essential to prevent vision loss.** 
+The human eye is an intricate organ tasked with the process of vision, comprising several constituent elements that collaborate harmoniously to capture and interpret light. Its principal components encompass the cornea, iris, pupil, lens, retina, and optic nerve. Positioned at the posterior aspect of the eye, the retina assumes paramount importance, housing light-sensitive cells known as photoreceptors that transmute light into electrical impulses. Within the retina lies the macula, a diminutive region centrally situated, pivotal in facilitating acute, focal vision vital for tasks such as reading and driving. The retina assumes a pivotal function in receiving and structuring visual stimuli. **Early detection and treatment are essential to prevent vision loss.** 
 
-Optical Coherence Tomography (OCT) is a diagnostic tool that provides high-resolution imaging and quantification of retinal layers affected by disease. OCT uses light waves to capture cross-sectional images of the retina, providing detailed information for diagnosis and monitoring changes in the retina and optic nerve over time. This technology is crucial for accurate diagnosis and selection of appropriate treatment options. Ophthalmologist can use OCT to observe each of the retina's different layers. Ophthalmologist will be able to map and assess their thickness as a result of this. These metrics aid in the diagnosing process. They also offer medical advice for glaucoma and retinal problems. OCT may be used to diagnose a variety of eye disorders.Traditional methods of classifying retinal disorders have shown an accuracy ranging from 80% to 91%. Therefore, a deep learning system based on convolutional neural networks has been developed to classify retinal diseases more accurately, particularly in the early stages.
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/83cb61d2-b7d4-4942-bd86-b919160fcf77)
+Optical Coherence Tomography (OCT) stands as a pivotal diagnostic instrument, delivering high-fidelity imaging and precise quantification of retinal layers impacted by pathology. Leveraging light waves, OCT generates cross-sectional retinal images, furnishing intricate details crucial for diagnostic discernment and continual monitoring of retinal and optic nerve alterations over time. This technological advancement assumes paramount significance in ensuring precise diagnosis and optimal selection of therapeutic interventions. Ophthalmologists harness OCT's capabilities to meticulously inspect each stratum of the retina, facilitating mapping and evaluation of their thickness, thereby enhancing diagnostic efficacy. These quantitative metrics not only bolster the diagnostic process but also inform therapeutic strategies for conditions like glaucoma and retinal pathologies. OCT finds utility in diagnosing an array of ocular disorders. Traditional classification methodologies for retinal ailments have exhibited accuracies ranging from 80% to 91%. Consequently, a sophisticated deep learning framework predicated on convolutional neural networks has been devised to enhance the precision of retinal disease classification, particularly in the nascent stages of pathology.
+
+
+![image](https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/257cf11e-ca19-43ff-a36a-375d38fa2e02)
 
 1. Drusen are small yellow deposits that form under the retina, particularly in the macula. OCT images can clearly show the presence of drusen, helping eye care professionals diagnose age-related macular degeneration (AMD), a leading cause of vision loss in older adults.
 2. Diabetic macular edema (DME) is a complication of diabetic retinopathy, a condition that affects people with diabetes. OCT is crucial in diagnosing DME as it can visualize the swelling (edema) in the macula caused by fluid leakage from blood vessels.
 3. Choroidal neovascularization (CNV) is a condition where abnormal blood vessels grow beneath the retina. OCT imaging can detect CNV by revealing the presence of these abnormal vessels and any associated fluid or blood leakage.
 In summary, OCT plays a crucial role in the diagnosis and management of eye conditions such as drusen, DME, and CNV. By providing detailed images of the retina, OCT helps eye care professionals accurately diagnose these conditions and develop appropriate treatment plans to preserve vision.
 
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/d5d22713-41ae-4b09-b7c3-e8a95a5883ff)
 
-Dataset:
+<img width="750" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/209848c1-0d9a-49c7-b149-cf6c7f877e59">
 
-The dataset used in this project is obtained from Mendeley(https://data.mendeley.com/datasets/rscbjbr9sj/3) and it contains OCT images of retinas. It consists of a total of 62138 images, categorized into the following classes:
+
+## Dataset:
+
+The dataset used in this project is obtained from Mendeley(https://data.mendeley.com/datasets/rscbjbr9sj/3) and it contains OCT images of retinas. It consists of a total of **62138 images** , categorized into the following classes:
 - CNV (Choroidal Neovascularization)
 - DME (Diabetic Macular Edema)
 - DRUSEN
 - NORMAL
 
-Distribution of data is as below:
-CNV :15109
-DME :11598
-DRUSEN: 8866
-NORMAL: 26565
+The distribution of data is as below:
+1. NORMAL - 26565
+2. CNV - 15109
+3. DME - 11598
+4. DRUSEN - 8866
 
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/bdfdc494-ba14-478b-878a-d0f60077e6fb)
+<img width="900" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d87ef1e2-bb5a-4d5d-90b6-647c7f5d4671">
 
-Preprocessing:
-1. We resized the images to 256x256.
-2. And normalized images to 0,1
-3. Augmentation with below metrics:
-   # Define data augmentation
-datagen = ImageDataGenerator(
-    rotation_range=10,
-    width_shift_range=0.1,
-    height_shift_range=0.1,
-    shear_range=0.1,
-    zoom_range=0.1,
-    horizontal_flip=True,
-    vertical_flip=True,
-    fill_mode='nearest'
-)
+## Preprocessing steps were undertaken as follows:
+
+1. The images were resized uniformly to dimensions of 256x256 pixels.
+2. Subsequently, normalization was applied to scale the pixel values within the range of 0 to 1.
+3. Augmentation techniques were employed using the following parameters within the defined data augmentation process:
+   - Rotation range: 10 degrees
+   - Width shift range: 0.1 (10% of the image width)
+   - Height shift range: 0.1 (10% of the image height)
+   - Shear range: 0.1 (10% shear intensity)
+   - Zoom range: 0.1 (zooming range of 10%)
+   - Horizontal flip: Enabled (random horizontal flipping)
+   - Vertical flip: Enabled (random vertical flipping)
+   - Fill mode: Nearest neighbor interpolation to handle pixel filling near boundaries.
 
 
+We have tried multiple models as given in the Python file attached to this project.
 
-We have tried multiple models as give in the python file atatched to this project.
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/8e2132f2-e8f6-4888-974f-39373bfefb76)
+<img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/dd35ff01-382b-411b-9bed-803f28d0cd7c">
 
 Below CNN model proves to be the best.
 
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/e7ca4a24-c44c-4408-80aa-88d06e0c9441)
+<img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d00cc775-74c5-4aa6-b863-53565493eae5">
 
-![image](https://github.com/Satyasaimandlem/OCT_Image_Classification/assets/129209796/29a7c08c-2221-42a7-a921-4068da6872be)
-
-
+<img width="896" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/f58dc72c-107b-4690-ab15-736311ac2118">
 
 
 Contact Information:
 •	Satyasai Mandlem(satyasm1@umbc.edu)
+•	Hemanth Varma Dantuluri (h167@umbc.edu)
 •	Nikitha Guntaka
-•	Hemanth Varma Dantuluri
 
 
 
