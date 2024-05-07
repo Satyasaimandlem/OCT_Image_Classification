@@ -7,17 +7,21 @@ The human eye is an intricate organ tasked with the process of vision, comprisin
 
 Optical Coherence Tomography (OCT) stands as a pivotal diagnostic instrument, delivering high-fidelity imaging and precise quantification of retinal layers impacted by pathology. Leveraging light waves, OCT generates cross-sectional retinal images, furnishing intricate details crucial for diagnostic discernment and continual monitoring of retinal and optic nerve alterations over time. This technological advancement assumes paramount significance in ensuring precise diagnosis and optimal selection of therapeutic interventions. Ophthalmologists harness OCT's capabilities to meticulously inspect each stratum of the retina, facilitating mapping and evaluation of their thickness, thereby enhancing diagnostic efficacy. These quantitative metrics not only bolster the diagnostic process but also inform therapeutic strategies for conditions like glaucoma and retinal pathologies. OCT finds utility in diagnosing an array of ocular disorders. Traditional classification methodologies for retinal ailments have exhibited accuracies ranging from 80% to 91%. Consequently, a sophisticated deep learning framework predicated on convolutional neural networks has been devised to enhance the precision of retinal disease classification, particularly in the nascent stages of pathology.
 
+<p align="center">
+   <img width="617" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/a90fe410-a320-4bc6-9a3f-96273e0b7100">
+</p>
 
-![image](https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/257cf11e-ca19-43ff-a36a-375d38fa2e02)
+1. Drusen, characterized as diminutive yellow accumulations beneath the retina, primarily in the macular region, are effectively visualized using OCT images. This capability aids eye care specialists in identifying age-related macular degeneration (AMD), a prominent cause of vision impairment in the elderly population.
 
-1. Drusen are small yellow deposits that form under the retina, particularly in the macula. OCT images can clearly show the presence of drusen, helping eye care professionals diagnose age-related macular degeneration (AMD), a leading cause of vision loss in older adults.
-2. Diabetic macular edema (DME) is a complication of diabetic retinopathy, a condition that affects people with diabetes. OCT is crucial in diagnosing DME as it can visualize the swelling (edema) in the macula caused by fluid leakage from blood vessels.
-3. Choroidal neovascularization (CNV) is a condition where abnormal blood vessels grow beneath the retina. OCT imaging can detect CNV by revealing the presence of these abnormal vessels and any associated fluid or blood leakage.
-In summary, OCT plays a crucial role in the diagnosis and management of eye conditions such as drusen, DME, and CNV. By providing detailed images of the retina, OCT helps eye care professionals accurately diagnose these conditions and develop appropriate treatment plans to preserve vision.
+2. Diabetic macular edema (DME) emerges as a complication of diabetic retinopathy, prevalent among individuals with diabetes. OCT proves indispensable in diagnosing DME by delineating macular edema resulting from fluid leakage originating from blood vessels.
 
+3. Choroidal neovascularization (CNV) denotes the abnormal growth of blood vessels beneath the retina. Utilizing OCT imaging, CNV can be detected through the visualization of these anomalous vessels and any associated fluid or hemorrhagic leakage.
 
-<img width="750" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/209848c1-0d9a-49c7-b149-cf6c7f877e59">
+In essence, OCT plays a pivotal role in the identification and therapeutic management of ocular conditions like drusen, DME, and CNV. By furnishing detailed retinal images, OCT empowers eye care practitioners to accurately diagnose these conditions and formulate tailored treatment regimens to safeguard visual acuity.
 
+<p align="center">
+    <img width="750" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/209848c1-0d9a-49c7-b149-cf6c7f877e59">
+</p>
 
 ## Dataset:
 
@@ -33,7 +37,9 @@ The distribution of data is as below:
 3. DME - 11598
 4. DRUSEN - 8866
 
-<img width="900" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d87ef1e2-bb5a-4d5d-90b6-647c7f5d4671">
+<p align="center">
+   <img width="900" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d87ef1e2-bb5a-4d5d-90b6-647c7f5d4671">
+</p>
 
 ## Preprocessing steps were undertaken as follows:
 
@@ -49,22 +55,21 @@ The distribution of data is as below:
    - Vertical flip: Enabled (random vertical flipping)
    - Fill mode: Nearest neighbor interpolation to handle pixel filling near boundaries.
 
+_We have experimented with various models as outlined in the Python file attached to this project. The F-1 scores for both the training and testing datasets for all the models are presented in the table below._
 
-We have tried multiple models as given in the Python file attached to this project.
+<p align="center">
+   <img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/dd35ff01-382b-411b-9bed-803f28d0cd7c">
+</p>
 
-<img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/dd35ff01-382b-411b-9bed-803f28d0cd7c">
+The CNN model below demonstrates superior performance compared to all other algorithms.
 
-Below CNN model proves to be the best.
+<p align="center">
+   <img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d00cc775-74c5-4aa6-b863-53565493eae5">
 
-<img width="650" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/d00cc775-74c5-4aa6-b863-53565493eae5">
-
-<img width="896" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/f58dc72c-107b-4690-ab15-736311ac2118">
-
+   <img width="896" alt="image" src="https://github.com/hemanth08/OCT_ImageClassification/assets/102893567/f58dc72c-107b-4690-ab15-736311ac2118">
+</p>
 
 Contact Information:
-•	Satyasai Mandlem(satyasm1@umbc.edu)
 •	Hemanth Varma Dantuluri (h167@umbc.edu)
+•	Satyasai Mandlem(satyasm1@umbc.edu)
 •	Nikitha Guntaka
-
-
-
